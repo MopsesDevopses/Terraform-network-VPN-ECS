@@ -174,7 +174,7 @@ resource "aws_launch_configuration" "project_bh" {
   image_id             = "ami-02dc7693482d55881"
   instance_type        = "t3.micro"
   security_groups      = ["${aws_security_group.project_bh.id}"]
-  iam_instance_profile = "${aws_iam_instance_profile.bastion-node.name}"
+  iam_instance_profile = "${var.iam_bastion_name}"
   key_name             = "${var.key}"
 
   user_data = templatefile("./user_data/user_data_vpn.sh.tpl", {
