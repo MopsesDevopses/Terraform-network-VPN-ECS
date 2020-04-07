@@ -5,120 +5,120 @@ variable "region" {
 #=====Security Group
 
 variable "allow_ports" {
-  default = ["80", "443", "22"]
+  default = ""
 }
 
 #=====Network
 
 variable "vpc_cidr" {
-  default = "10.0.0.0/16"
+  default = ""
 }
 
 variable "public_subnet_cidrs" {
-  default = ["10.0.0.0/24", "10.0.1.0/24"]
+  default = ""
 }
 
 variable "private_subnet_cidrs" {
-  default = ["10.0.2.0/24", "10.0.3.0/24"]
+  default = ""
 }
 
 variable "type_instance" {
-  default = "t3.micro"
+  default = ""
 }
 
 variable "key" {
-  default = "Frankfurt-DevOps-Lab"
+  default = ""
 }
 
 #=====ECS
 
 variable "count_container" {
-  default = "1"
+  default = ""
 }
 
 variable "name_container" {
-  default = "nginx"
+  default = ""
 }
 
 variable "port_container" {
-  default = "80"
+  default = ""
 }
 
 variable "ecs_cluster_name" {
-  default = "default-name"
+  default = ""
 }
 
 variable "ecs_service_name" {
-  default = "default-name"
+  default = ""
 }
 
 variable "ecs_task_definition_family" {
-  default = "default-name"
+  default = ""
 }
 
 #=====EC2
 
 variable "asg_max_size" {
-  default = "1"
+  default = ""
 }
 
 variable "asg_min_size" {
-  default = "1"
+  default = ""
 }
 
 variable "asg_desired_capacity" {
-  default = "1"
+  default = ""
 }
 
 variable "type_instance_VPN" {
-  default = "t3.micro"
+  default = ""
 }
 
 variable "ami_VPN" {
-  default = "ami-0b418580298265d5c"
+  default = ""
 }
 #=====RDS
 
 variable "allocated_storage" {
-  default = "50"
+  default = ""
 }
 
 variable "engine" {
   #default = "postgres"
-  default = "mysql"
+  default = ""
 }
 
 variable "engine_version" {
-  default = "8.0.17"
+  default = ""
 }
 
 variable "instance_class" {
-  default = "db.t2.small"
+  default = ""
 }
 
 variable "username" {
-  default = "mysqladmin"
+  default = ""
 }
 
 variable "db_allow_port" {
-  default = "3306"
+  default = ""
 }
 
 variable "backup_retention_period" {
-  default = "8"
+  default = ""
 }
 
 variable "rds_pswd_keeper" {
   description = "Password keeper"
-  default     = "mysql"
+  default     = ""
 }
 
 #=====Tags
 
 variable "env" {
-  default = "prod"
+  default = ""
 }
 
 variable "project" {
-  default = "devopslab"
+  default = ""
 }
