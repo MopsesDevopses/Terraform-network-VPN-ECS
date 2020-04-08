@@ -5,21 +5,21 @@ variable "region" {
 #=====Security Group
 
 variable "allow_ports" {
-  default = ""
+  default = ["80", "443", "22"]
 }
 
 #=====Network
 
 variable "vpc_cidr" {
-  default = ""
+  default = "10.0.0.0/16"
 }
 
 variable "public_subnet_cidrs" {
-  default = ""
+  default = ["10.0.0.0/24", "10.0.1.0/24"]
 }
 
 variable "private_subnet_cidrs" {
-  default = ""
+  default = ["10.0.2.0/24", "10.0.3.0/24"]
 }
 
 variable "type_instance" {
@@ -71,7 +71,7 @@ variable "asg_desired_capacity" {
 }
 
 variable "type_instance_VPN" {
-  default = ""
+  default = "t3.micro"
 }
 
 variable "ami_VPN" {
