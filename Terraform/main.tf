@@ -54,6 +54,7 @@ module "EC2" {
   project              = "${var.project}"
 }
 
+/*
 module "EFS" {
   source      = "./modules/EFS"
   private_subnet_id    = "${module.network.private_subnet_ids}"
@@ -61,6 +62,7 @@ module "EFS" {
   project              = "${var.project}"
   vpc_id               = "${module.network.vpc_id}"
 }
+*/
 
 module "IAM_for_EC2" {
   source      = "./modules/IAM"
